@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import SplashScreen from './components/SplashScreen';
+
+// --- FIXED: Changed 'components' to 'Components' (Capital C) ---
+import SplashScreen from './Components/SplashScreen';
+
 import HomePage from './pages/HomePage';
 import CarSales from './pages/CarSales';
 import CategoryPage from './pages/CategoryPage';
 import CustomizationStudio from './pages/CustomizationStudio';
 import ContactPage from './pages/ContactPage';
-// 1. IMPORT THE NEW STUDIO PAGE
 import Studio from './pages/Studio';
 
 const ScrollToTop = () => {
@@ -37,8 +39,6 @@ function App() {
           <Route path="/categories/:id" element={<CategoryPage />} />
           <Route path="/customization" element={<CustomizationStudio />} />
           <Route path="/contact" element={<ContactPage />} />
-          
-          {/* 2. ADD THE STUDIO DETAIL ROUTE */}
           <Route path="/studio/:type" element={<Studio />} />
         </Routes>
       )}
